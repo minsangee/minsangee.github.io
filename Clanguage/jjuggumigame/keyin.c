@@ -2,9 +2,9 @@
 #include <stdbool.h>
 #include "keyin.h"
 
-// ¹Ì¸® Á¤ÇØµÎÁö ¾ÊÀº Å°°¡ ÀÔ·ÂµÇ¸é ¹«½ÃÇÏ±â À§ÇÑ ÇÔ¼ö
+// ë¯¸ë¦¬ ì •í•´ë‘ì§€ ì•Šì€ í‚¤ê°€ ì…ë ¥ë˜ë©´ ë¬´ì‹œí•˜ê¸° ìœ„í•œ í•¨ìˆ˜
 bool is_valid(key_t key) {
-	// keyin.h¿¡ ÀÖ´Â ¸ñ·Ï°ú ¶È°°ÀÌ ¸ÂÃç¾ßÇÔ(K_UNDEFINED Á¦¿Ü)
+	// keyin.hì— ìˆëŠ” ëª©ë¡ê³¼ ë˜‘ê°™ì´ ë§ì¶°ì•¼í•¨(K_UNDEFINED ì œì™¸)
 	static key_t key_list[] = {
 		K_UP,
 		K_DOWN,
@@ -26,7 +26,7 @@ bool is_valid(key_t key) {
 	return false;
 }
 
-// Å°º¸µå¿¡¼­ ÀÔ·Â ¹ŞÀº Å°°¡ ¹«½¼ Å°ÀÎÁö ±¸ºĞÇØ¼­ ¸®ÅÏ
+// í‚¤ë³´ë“œì—ì„œ ì…ë ¥ ë°›ì€ í‚¤ê°€ ë¬´ìŠ¨ í‚¤ì¸ì§€ êµ¬ë¶„í•´ì„œ ë¦¬í„´
 key_t get_key(void) {
 	if (!_kbhit()) {
 		return K_UNDEFINED;
